@@ -1,0 +1,100 @@
+/* AQUI HAY ESTILOS DE LA CABECERA INCLUIDA CON PHP
+Y DE EL FOOTER QUE ESTA INCLUIDO CON PHP */
+
+
+/*variables, en root se cambia la variable principal*/
+
+:root {
+    --main-bg-color: #62c370;
+    --main-text-color: black;
+    --circle-size: clamp(1.5rem, 5vw, 3rem);
+    --spacing: clamp(0.25rem, 2vw, 0.5rem);
+}
+
+html {
+    color: var(--main-text-color);
+}
+
+body {
+    color: var(--main-text-color);
+}
+
+#nav-principal {
+    background-color: var(--main-bg-color);
+}
+
+li {
+    color: var(--main-text-color);
+}
+
+
+/* 
+=======FOOTER=========
+=======FOOTER=========
+=======FOOTER========= 
+*/
+
+#id-footer {
+    margin-top: 3rem;
+    width: 100%;
+    background-color: var(--main-bg-color);
+}
+
+
+/*Stteper*/
+
+.c-stepper__item {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 4rem;
+}
+
+.c-stepper__item:before {
+    content: "";
+    flex: 0 0 var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+
+.c-stepper__item:not(:last-child):after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(var(--circle-size) + var(--spacing));
+    bottom: var(--spacing);
+    z-index: 1;
+    transform: translateX(calc(var(--circle-size) / 2));
+    width: 2px;
+    background-color: #e0e0e0;
+}
+
+.c-stepper__title {
+    font-weight: bold;
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    margin-bottom: clamp(0.85rem, 2vmax, 1rem);
+}
+
+.c-stepper__desc {
+    color: grey;
+    font-size: clamp(0.85rem, 2vmax, 1rem);
+}
+
+.c-stepper__content {
+    max-width: 700px;
+}
+
+
+/*** Non-demo CSS ***/
+
+.wrapper {
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
