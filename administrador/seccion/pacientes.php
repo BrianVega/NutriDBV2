@@ -296,7 +296,7 @@ switch($accion){
                 <div class="form-row tel-sex-edad-paciente">
                     <div class="col-md-4 mb-4">
                         <label for="telefonoPaciente">Teléfono</label>
-                        <input type="tel" class="form-control" id="telefonoPaciente" name="telefonoPaciente"
+                        <input type="text" class="form-control" id="telefonoPaciente" name="telefonoPaciente"
                             placeholder="3414205938" pattern="[0-9]{10}" maxlength="10"
                             value="<?php if($operacionSeleccionar == "mostrar datos seleccionar") { echo $telefonoEncontrado; } else echo "";?>"
                             required>
@@ -307,7 +307,7 @@ switch($accion){
 
                     <div class="col-md-3 mb-3">
                         <label for="edadPaciente">Edad</label>
-                        <input type="number" class="form-control" id="edadPaciente" name="edadPaciente" placeholder="24"
+                        <input type="text" class="form-control" id="edadPaciente" name="edadPaciente" placeholder="24"
                             min="1" max="99"
                             value="<?php if($operacionSeleccionar == "mostrar datos seleccionar") { echo $edadEncontrado; } else echo "";?>"
                             required>
@@ -348,7 +348,7 @@ switch($accion){
                     </div>
                     <div class="col-md-6 mb-1">
                         <label for="numeroPaciente">Número</label>
-                        <input type="number" class="form-control" name="numeroPaciente" id="numeroPaciente"
+                        <input type="text" class="form-control" name="numeroPaciente" id="numeroPaciente"
                             placeholder="365" min="1"
                             value="<?php if($operacionSeleccionar == "mostrar datos seleccionar") { echo $numeroEncontrado; } else echo "";?>"
                             required>
@@ -360,7 +360,7 @@ switch($accion){
                 <div class="form-row direccion_CP-paciente">
                     <div class="col-md-3 mb-3">
                         <label for="codigoPostalPaciente">Código postal</label>
-                        <input type="number" class="form-control" name="codigoPostalPaciente" id="codigoPostalPaciente"
+                        <input type="text" class="form-control" name="codigoPostalPaciente" id="codigoPostalPaciente"
                             placeholder="49064" min="1"
                             value="<?php if($operacionSeleccionar == "mostrar datos seleccionar") { echo $codigoPostalEncontrado; } else echo "";?>"
                             required>
@@ -528,5 +528,5 @@ switch($accion){
 
     </div>
 </section>
-
+<script src="../js/formularioValidaciones.js"></script>
 <?php include("../template/pie.php");?>
